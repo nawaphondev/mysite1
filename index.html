@@ -8,7 +8,8 @@
     <!-- =====BOX ICONS===== -->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="./picture/logo.png" type="image/x-icon" />
-    <title>Portfolio Website</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Nawaphon's folio</title>
 </head>
 
 <body>
@@ -27,6 +28,8 @@
                     <li class="nav__item"><a href="#work" class="nav__link">Activities</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                     <li class="nav__item"><a href="#java" class="nav__link">JavaScript</a></li>
+                    <li class="nav__item"><a href="#chartjs" class="nav__link">ChartJS</a></li>
+                    <li class="nav__item"><a href="#api" class="nav__link">API</a></li>
                 </ul>
             </div>
 
@@ -79,7 +82,9 @@
                 <div>
                     <h2 class="about__subtitle">I'm Nawaphon Phophom</h2>
                     <p class="about__text">
-                        Hello, my name is Nawaporn Phonphrom. My nickname is Bill. I am from Maha Sarakham Rajabhat University. I am very happy with CodeCamp Academy right now, and I really hope that it will lead me to success.</p>
+                        Hello, my name is Nawaporn Phonphrom. My nickname is Bill. I am from Maha Sarakham Rajabhat
+                        University. I am very happy with CodeCamp Academy right now, and I really hope that it will lead
+                        me to success.</p>
                 </div>
             </div>
         </section>
@@ -92,7 +97,8 @@
                 <div>
                     <h2 class="skills__subtitle">Profesional Skills</h2>
                     <p class="skills__text">
-                        Traditional basic skills Skills from studying and skills expected to be developed while studying CodeCamp Academy</p>
+                        Traditional basic skills Skills from studying and skills expected to be developed while studying
+                        CodeCamp Academy</p>
 
                     <div class="skills__data">
                         <div class="skills__names">
@@ -196,47 +202,143 @@
     <!--==== JAVASCRIPT =====-->
     <section class="contact section" id="java">
         <h2 class="section-title">JavaScript</h2>
-        <br>
         <div class="java-body">
-        <h2 class="java-h2">Just change A - Z</h2>
-        <p id="demo">Hi</p>
+            <!-- <br>
+            <div class="java-body">
+                <h2 class="java-h2">หาความยาวเส้นรอบวง</h2>
+                <input id="input" type="text" placeholder="รัศมี" fdprocessedid="1pjfaa" />
+                <button class="java-btn" onclick="calculateAndDisplayCircumference()"
+                    fdprocessedid="kjvwr">คำนวน</button>
+                <h4 class="java-h4">ความยาวเส้นรอบวงกลม : <span id="result1"> </span></h4>
+            </div> -->
+            <!-- <div class="create">
+                <h3>Fruits Input App</h3>
+                <label for="fruitName">ชื่อผลไม้:</label>
+                <input type="text" id="fruitName">
+                <br>
+                <div class="namef">
+                    <label for="fruitQuantity">จำนวนผลไม้:</label>
+                    <input type="number" id="fruitQuantity">
+                </div>
+                <br>
+                <button onclick="addFruit()">เพิ่มผลไม้</button>
+                <div class="create">
+                    <p>ผลไม้ที่ถูกสร้าง</p>
+                    <pre id="show4"></pre>
+                </div>
+            </div> -->
 
-        <br>
-        <h2 class="java-h2">Click to change</h2>
-        <p id="demo2">Hi</p>
-        <button class="java-btn" onclick="myFunction()">Click me</button>
-        <br>
+            <div cclass="java-body">
+                <div class="java-body">
+                    <h2 class="java-h2">หาความยาวเส้นรอบวง</h2>
+                    <input id="input" type="text" fdprocessedid="1mel0p" placeholder="รัศมี"> <br>
+                    <button class="java-btn" onclick="calculateAndDisplayCircumference()">คำนวน</button>
+                    <h4 class="java-h4">ความยาวเส้นรอบวงกลม:<span id="show3"></span></h4>
+                </div>
+            </div>
 
-        <br>
-        <h2 class="java-h2">Calculate number</h2>
-        <input id="numb">
-        <button class="java-btn" type="button" onclick="myFunction2()">Submit</button>
-        <p id="demo3"></p>
+            <div class="java-body">
+                <div class="java-body">
+                    <h2 class="java-h2">หาความยาวเส้นทแยงมุมของสี่เหลี่ยงผืนผ้า</h2> 
+                    <input id="base" type="text" placeholder="ป้อนความยาวของฐาน"> <br>
+                    <input id="height" type="text" fdprocessedid="1mel0p" placeholder="ป้อนความสูง">
+                    <h4 class="java-h4">ผลลัพธ์:<span id="show5"></span></h4>
+                    <button class="java-btn" onclick="calculateHypotenuse(document.getElementById('base').value, document.getElementById('height').value)">คำนวน</button>
+                </div>
+            </div>
 
+            <div class="java-body">
+                <h2 class="java-h2">หาค่าวันต่อนาที</h2>
+                <input type="text" id="daysInput" fdprocessedid="1mel0p" placeholder="ระบุจำนวนวัน" />
+                <h4 class="java-h4"><span id="show2"></span></h4>
+                <button class="java-btn" onclick="dayToSeconds()" fdprocessedid="lky1nr">คำนวน</button>
+            </div>
+
+            <div class="java-body">
+                <h2 class="java-h2">หาค่าอุณหภูมิ</h2>
+                <h4 class="java-h4"><span id="show1"></span></h4>
+                <button class="java-btn" onclick="fahrenheitToCelsius()" fdprocessedid="25h2qg">กดปุ่ม</button>
+            </div>
+
+            <div class="java-body">
+                <div class="java-body">
+                    <h2 class="java-h2">คำนวนคะแนนเกรด</h2>
+                    <h4 class="java-h4" id="number"></h4>
+                    <button class="java-btn" onclick="number()">คำนวน</button>
+                </div>
+            </div>
+        </div>
         <br>
-        <div class="java-body">
-            <h2 class="java-h2">หาความยาวเส้นรอบวง</h2>
-            <input id="input" type="text" placeholder="รัศมี" fdprocessedid="1pjfaa" />
-            <button class="java-btn" onclick="calculateAndDisplayCircumference()" fdprocessedid="kjvwr">คำนวน</button>
-            <h4>ความยาวเส้นรอบวงกลม : <span id="result"> </span></h4>
+        <br>
+        <br>
+        <br>
+    </section>
+
+    <!--===== Chart.js =====-->
+    <section class="contact section" id="chartjs">
+        <h2 class="section-title">ChartJS</h2>
+        <br>
+        <div>
+            <h4 class="java-h4">5 อันดับสัตว์ที่คนทั่วโลกนิยมเลี้ยง</h4>
+            <canvas id="polarAreaChart"></canvas>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <br>
+            <br>
+            <br>
+
+            <!--===== Chart.js2 =====-->
+            <canvas id="radarChart"></canvas>
+
         </div>
 
+    </section>
+
+    <!--==== Form Sheet ====-->
+    <section class="contact section" id="api">
+        <h2 class="section-title">API</h2>
+        <div id="response-message"></div>
+        <h2 class="java-h2">Form Sheet</h2>
         <div class="java-body">
-            <h2 class="java-h2">หาค่าอุณหภูมิ</h2>
-            <h4 class="java-h4"><span id="show1"></span></h4>
-            <button class="java-btn" onclick="fahrenheitToCelsius()" fdprocessedid="25h2qg">กดปุ่ม</button>
+            <form class="form-sheet" method="POST"
+                action="https://script.google.com/macros/s/AKfycbzW9RFYqCIOEdcJcDPFeHzTzoxhZ3V-IcOcaXanu_e1EJtsG--nSYofc_KiLujy93VyGQ/exec"
+                onsubmit="submitForm(event)">
+                <input name="Email" type="email" placeholder="Email" required>
+                <input name="Name" type="text" placeholder="Name" required>
+                <button class="java-btn" type="submit">Send</button>
+            </form>
         </div>
-        <div class="java-body">
-            <h2 class="java-h2">หาค่าวันต่อนาที</h2>
-            <input type="text" id="daysInput" fdprocessedid="1mel0p" />
-            <h4 class="java-h4"><span id="show2"></span></h4>
-            <button class="java-btn" onclick="dayToSeconds()" fdprocessedid="lky1nr">คำนวน</button>
+        <br>
+
+        <!-- สร้างปุ่ม Click เพื่อให้ Update ภาพหรือคำจาก API -->
+        <h2 class="java-h2">Nationalize API</h2>
+        <form class="form-sheet" id="nameForm">
+            <label for="name">Enter your name : </label>
+            <input type="text" id="name" name="name" placeholder="Name" required>
+            <button class="java-btn" type="button" onclick="fetchNationality()">Submit</button>
+        </form>
+        <div id="result"></div>
+        <br>
+
+        <!-- อันนี้ Update ราคา Crypto -->
+        <h2 class="java-h2">Coinbase API</h2>
+        <div id="pricesContainer">
+            <div id="prices"></div>
+            <div id="lastUpdateTime"></div>
         </div>
-    </div>
-    <br>
-    <br>
-    <br>
-    <br>
+        <br>
+        
+        <!-- API -->
+        <iframe width="100%" height="400" seamless frameborder="0" scrolling="no"
+            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQoUQp3xQyNCSWlKJtq8OnT_X45pO1oCBROwkK82rpo4f7V5BNukgZr062B_ypLcm2NJJFjT652LYSv/pubchart?oid=1437486449&format=interactive"></iframe>
+
+        <hr>
+        <iframe width="100%" height="600"
+            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQoUQp3xQyNCSWlKJtq8OnT_X45pO1oCBROwkK82rpo4f7V5BNukgZr062B_ypLcm2NJJFjT652LYSv/pubhtml?gid=0&single=true&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+        <hr>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3831.3826973541886!2d103.268403474907!3d16.200753684497922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3122a6ae121c1c2f%3A0x626cae9fcd86bf3d!2z4Lih4Lir4Liy4Lin4Li04LiX4Lii4Liy4Lil4Lix4Lii4Lij4Liy4LiK4Lig4Lix4LiP4Lih4Lir4Liy4Liq4Liy4Lij4LiE4Liy4Lih!5e0!3m2!1sth!2sth!4v1701865340071!5m2!1sth!2sth"
+            width="600" height="450" style="border:0;"   allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
 
         <!--===== FOOTER =====-->
         <footer class="footer">
