@@ -410,10 +410,12 @@ img {
     cursor: pointer;
     border-radius: 4px;
     margin-top: 10px;
+    margin: auto;
 }
 
 .java-h4 {
     color: #555;
+    text-align: center;
 }
 
 .box {
@@ -427,10 +429,120 @@ img {
 
 #result,
 #show1,
-#show2 {
+#show2,
+#show3,
+#show4,
+#show5 {
     color: #3498db;
 }
 
+#resultContainer {
+    display: block;
+  }
+
+/* form */
+.java-h2 {
+    text-align: center;
+  }
+  
+  .form-sheet {
+    text-align: center;
+  }
+  
+  .form-sheet input,
+  .form-sheet button {
+    margin: 10px 0;
+  }
+  
+  .java-btn {
+    color: #fff; /* เปลี่ยนสีข้อความบนปุ่ม */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .java-btn:hover {
+    background-color: var(--first-color); /* เปลี่ยนสีเมื่อโฮเวอร์ปุ่ม */
+  }
+
+  /* COIN API */
+  #pricesContainer {
+    text-align: center;
+  }
+  
+  #prices {
+    margin: 0;
+    padding: 0;
+  }
+  
+  #lastUpdateTime {
+    margin-top: 10px;
+  }
+
+/* ===== CHART.JS =====*/
+#polarAreaChart {
+    display: block;
+    margin: auto;
+    max-width: 80%;
+  }
+
+  /* Optional: Add some styles to the chart legend */
+  .chart-legend {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .chart-legend-item {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+
+  .chart-legend-color {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border-radius: 50%;
+  }
+
+  /* CHART2 */
+    #radarChart {
+    display: block;
+    margin: auto;
+    max-width: 100%; 
+  }
+
+  .chart-legend {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .chart-legend-item {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+
+  .chart-legend-color {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border-radius: 50%;
+  }
+
+  /* API */
+  #result {
+    text-align: center;
+  }
+  
+  
 /* ===== FOOTER =====*/
 .footer {
     background-color: var(--second-color);
@@ -463,6 +575,7 @@ img {
 .footer__copy {
     font-size: var(--smaller-font-size);
 }
+
 
 /* ===== MEDIA QUERIES=====*/
 @media screen and (max-width: 320px) {
