@@ -309,13 +309,13 @@ function displayPrices(data) {
   var rates = data.data.rates;
 
   var currencies = ['1INCH', 'AAVE', 'ABT', 'ACH', 'ACS', 'ADA', 'AED', 'BTC', 'ETH'];
-  var pricesHtml = '<p>1 USDT can buy:</p><ul>';
+  var pricesHtml = '<p>1 USDT can buy : </p><ul>';
 
   currencies.forEach(currency => {
       if (rates[currency]) {
-          pricesHtml += `<li>${currency}: ${rates[currency]}</li>`;
+          pricesHtml += `<li>${currency} : ${rates[currency]}</li>`;
       } else {
-          pricesHtml += `<li>${currency}: N/A</li>`;
+          pricesHtml += `<li>${currency} : N/A</li>`;
       }
   });
 
@@ -325,7 +325,7 @@ function displayPrices(data) {
 
 function displayLastUpdateTime(currentTime) {
   var updateTimeDiv = document.getElementById('lastUpdateTime');
-  updateTimeDiv.innerHTML = `<p>Last Update Time: ${currentTime}</p>`;
+  updateTimeDiv.innerHTML = `<p>Last Update Time : ${currentTime}</p>`;
 }
 
 fetchPrices();
